@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Email Verification</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Poppins,sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#020617,#0f172a,#1e293b);
+}
+
+.container{
+
+    width:420px;
+    padding:40px;
+
+    border-radius:28px;
+
+    background:rgba(255,255,255,0.08);
+
+    border:1px solid rgba(255,255,255,0.15);
+
+    backdrop-filter:blur(18px);
+
+    box-shadow:0 10px 35px rgba(0,0,0,0.4);
+
+    text-align:center;
+
+    color:white;
+
+}
+
+.logo{
+
+    width:90px;
+    height:90px;
+
+    margin:auto;
+    margin-bottom:25px;
+
+    border-radius:24px;
+
+    background:linear-gradient(135deg,#2563eb,#7c3aed);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:34px;
+    font-weight:bold;
+
+}
+
+h1{
+    margin-bottom:12px;
+    font-size:32px;
+}
+
+p{
+    color:#cbd5e1;
+    margin-bottom:30px;
+}
+
+input{
+
+    width:100%;
+
+    padding:16px;
+
+    border:none;
+    outline:none;
+
+    border-radius:16px;
+
+    background:rgba(255,255,255,0.08);
+
+    border:1px solid rgba(255,255,255,0.1);
+
+    color:white;
+
+    margin-bottom:20px;
+
+    font-size:15px;
+
+}
+
+input::placeholder{
+    color:#94a3b8;
+}
+
+button{
+
+    width:100%;
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:16px;
+
+    background:linear-gradient(135deg,#2563eb,#7c3aed);
+
+    color:white;
+
+    font-size:16px;
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:0.3s;
+
+}
+
+button:hover{
+    transform:scale(1.02);
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="logo">
+        OTP
+    </div>
+
+    <h1>Email Verification</h1>
+
+    <p>
+        Enter your email address to receive OTP
+    </p>
+
+    <form action="/send-otp" method="POST">
+
+        <input
+            type="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+        >
+
+        <button type="submit">
+            Send OTP
+        </button>
+
+    </form>
+
+</div>
+
+</body>
+
+</html>
